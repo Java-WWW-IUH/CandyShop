@@ -99,9 +99,9 @@
             <footer style="background-color: black; color: white; height: 200px; padding-left: 50px;">
                 <div class="row">
                     <div class="col-9">
-                        <h4 style="padding-top: 20px;padding-bottom: 20px;">CỬA HÀNG MÁY ẢNH K2NCamShop</h4>
+                        <h4 style="padding-top: 20px;padding-bottom: 20px;">CỬA HÀNG BÁNH KẸO CANDY SHOP</h4>
                         <p class="pFooter">Địa chỉ: số 8 Nguyễn Văn Bảo, Phường 4, Quận Gò Vấp, TP Hồ Chí Minh</p>
-                        <p class="pFooter">Điện thoại: 0976553787 - Email: K2NCamShop@gmail.vn </p>
+                        <p class="pFooter">Điện thoại: 0976553787 - Email: CandyShop@gmail.vn </p>
                         <p class="pFooter">&copy Copyright 2021</p>
                     </div>
                     <div class="col-3" style="padding-top: 20px;">
