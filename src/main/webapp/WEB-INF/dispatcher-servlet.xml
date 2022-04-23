@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- was: <?xml version="1.0" encoding="UTF-8"?> -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="
+                  http://www.springframework.org/schema/beans
+                  http://www.springframework.org/schema/beans/spring-beans.xsd
+                  http://www.springframework.org/schema/context
+                  http://www.springframework.org/schema/context/spring-context.xsd
+                  http://www.springframework.org/schema/mvc
+                  http://www.springframework.org/schema/mvc/spring-mvc.xsd
+                  http://www.springframework.org/schema/tx 
+                  http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+
+   
+    <!-- Define Spring MVC view resolver -->
+	<bean
+                        class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+                        <property name="prefix" value="/WEB-INF/webpages/" />
+                        <property name="suffix" value=".jsp" />
+	</bean>
+    <context:component-scan base-package="sv.iuh.project.controller" />
+    <context:component-scan base-package="sv.iuh.project.util" />
+    <!--
+    Most controllers will use the ControllerClassNameHandlerMapping above, but
+    for the index controller we are using ParameterizableViewController, so we must
+    define an explicit mapping for it.
+    -->
+
+    <bean id="viewResolver"
+          class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+          p:prefix="/WEB-INF/webpages/"
+          p:suffix=".jsp" 
+    />
+    
+    <bean class="org.springframework.web.multipart.commons.CommonsMultipartResolver" id="multipartResolver"/>
+    
+    <!--
+    The index controller.
+    -->
+    <bean id="ProductBrandDao" class="sv.iuh.project.dao.ProductBrandDAOImpl" />
+    <bean id="ProductBrandService" class="sv.iuh.project.service.ProductBrandServiceImpl" />
+    <bean id="ProductCategoryService" class="sv.iuh.project.service.ProductCategoryServiceImpl" />
+    <bean id="ProductCategoryDao" class="sv.iuh.project.dao.ProductCategoryDaoImpl" />
+    <bean id="ProductDaoService" class="sv.iuh.project.service.ProductServiceImpl" />
+    <bean id="ProductDao" class="sv.iuh.project.dao.ProductDaoImpl" />
+    <bean id="OrderManagementService" class="sv.iuh.project.service.OrderManagementServiceImpl" />
+    <bean id="OrderManagementDao" class="sv.iuh.project.dao.OrderManagementDAOImpl" />
+    <bean id="OrderDetailService" class="sv.iuh.project.service.OrderDetailServiceImpl" />
+    <bean id="OrderDetailDao" class="sv.iuh.project.dao.OrderDetailDAOImpl" />
+    <bean id="LoginService" class="sv.iuh.project.service.LoginServiceImpl" />
+    <bean id="LoginDao" class="sv.iuh.project.dao.LoginDaoImpl" />
+    <bean id="RegisterService" class="sv.iuh.project.service.RegisterServiceImpl" />
+    <bean id="RegisterDao" class="sv.iuh.project.dao.RegisterImpl" />
+    <bean id="CommentService" class="sv.iuh.project.service.CommentServiceImpl" />
+    <bean id="CommentDao" class="sv.iuh.project.dao.CommentDaoImpl" />
+    <bean id="UserService" class="sv.iuh.project.service.UserServiceImpl" />
+    <bean id="UserDao" class="sv.iuh.project.dao.UserDaoImpl" />
+    <bean id="StatisticalService" class="sv.iuh.project.service.StatisticalServiceImpl" />
+    <bean id="StatisticalDao" class="sv.iuh.project.dao.StatisticalDaoImpl" />
+    <bean id="ContactService" class="sv.iuh.project.service.ContactServiceImpl" />
+    <bean id="ContactDao" class="sv.iuh.project.dao.ContactDAOImpl" />
+
+    <mvc:resources mapping="/resources/**" location="/resources/"  cache-period="31556926"/>
+    <mvc:annotation-driven />
+</beans>

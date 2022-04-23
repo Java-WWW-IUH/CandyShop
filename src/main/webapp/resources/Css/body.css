@@ -1,0 +1,26 @@
+.carousel-inner img {
+    width: 100%;
+  }
+.customContainer{
+    width: 80%;
+}
+.btn-danger{
+  color: red;
+  background-color: white;
+  font-size: small;
+}
+.btn-danger:hover{
+  color: red;
+  background-color: white;
+  font-weight: bold;
+}
+.pFooter{
+  font-style: normal;
+  font-weight: normal;
+  font-size: small;
+}
+.container-custom{
+  width: 82%;
+  display: flex;
+  margin: 0 auto;
+}

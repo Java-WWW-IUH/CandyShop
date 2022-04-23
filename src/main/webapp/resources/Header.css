@@ -1,0 +1,22 @@
+ul{
+    color: black;
+}
+nav {
+    background-color: black;
+}
+.navbar .navbar-nav .nav-item .nav-link{
+    color: white;
+    font-weight: bold;
+}
+.navbar .navbar-nav .nav-item{
+    margin-left: 15px;
+}
+.navbar .navbar-nav .nav-item .nav-link:hover{
+    color: red;
+}
+.navbar .navbar-nav{
+    margin-left: 7vw ;
+}
+.row div a .linkAcc{
+    color: black;
+}

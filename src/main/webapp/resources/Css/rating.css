@@ -1,0 +1,92 @@
+.rating-loading {
+  width: 25px;
+  height: 25px;
+  font-size: 0;
+  color: #fff;
+  background: url(../img/loading.gif) top left no-repeat;
+  border: none;
+}
+
+  .empty-stars {
+    color: #aaa;
+  }
+
+
+.rating-rtl {
+  float: right;
+}
+
+.rating-animate .filled-stars {
+  transition: width .25s ease;
+  -o-transition: width .25s ease;
+  -moz-transition: width .25s ease;
+  -webkit-transition: width .25s ease;
+}
+
+
+
+.rating-lg {
+  font-size: 3.91em;
+}
+
+.rating-md {
+  font-size: 3.13em;
+}
+
+.rating-sm {
+  font-size: 2.5em;
+}
+
+.rating-xs {
+  font-size: 2em;
+}
+
+.rating-xl {
+  font-size: 4.89em;
+}
+
+.rating-container .clear-rating {
+  color: #aaa;
+  cursor: not-allowed;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 60%;
+  padding-right: 5px;
+}
+
+
+.rating-container .caption {
+  color: #999;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 60%;
+  margin-top: -.6em;
+  margin-left: 5px;
+  margin-right: 0;
+}
+
+.rating-rtl .caption {
+  margin-right: 5px;
+  margin-left: 0;
+}
+
+@media print {
+  .rating-container .clear-rating {
+    display: none;
+  }
+}
+.empty-star{
+  color:#dee2e6;
+}
+.rating-container .filled-stars {
+    -webkit-text-stroke: 0; 
+    text-shadow: none; 
+    color:#ffca00;
+}
+.progress{
+    margin-top: 1rem;
+    border-radius: 0; 
+}
+.progress-bar {
+    background-color: #ffca00;
+}
