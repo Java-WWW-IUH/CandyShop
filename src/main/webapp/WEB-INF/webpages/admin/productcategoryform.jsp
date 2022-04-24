@@ -52,7 +52,7 @@
                             <input type="text" class="form-control" hidden="true" value="${productCategory.productCategoryID}" id="exampleInputUsername1" name="id" placeholder="Nhập tên thương hiệu">
                             <div class="form-group">
                                 <label for="exampleInputUsername1">Tên Sản Phẩm</label>
-                                <input type="text"  pattern="^[a-zA-Z_ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ]+$"
+                                <input type="text"  pattern="^[a-zA-Z_ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ ]+$"
         title="Tên loại sản phẩm không chứ kí tự đặc biệt" class="form-control" id="exampleInputUsername1" value="${productCategory.productCategoryName}" name="name" placeholder="Nhập tên loại sản phẩm">
                             </div>
                             <button type="submit" class="btn btn-primary mr-2">Lưu</button>
