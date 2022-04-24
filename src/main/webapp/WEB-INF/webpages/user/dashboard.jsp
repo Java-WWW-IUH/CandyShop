@@ -73,56 +73,21 @@
         <div class="container" align="center">
             <div class="container-fluid">
                 <div class="row">
+                 <c:forEach items="${top4List}" var="pl">
                     <div class="col-3">
+                      
                         <div class="card" style="width:100%">
-                            <img class="card-img-top" src="<c:url value="/resources/Image/Product/banh1.png"/>"  alt="Card image" style="width: 100%;height: 170px">
+                            <img class="card-img-top" src="${pageContext.request.contextPath}/image/${pl.img}"  alt="Card image" style="width: 100%;height: 170px">
                             <div class="card-body">
-                                <h4 class="card-title">BÁNH - KẸO 1</h4>
-                                <p class="card-text">Some example text some example text. John Doe is an architect and
-                                    engineer</p>
+                                <h4 class="card-title">${pl.productName}</h4>
+                                <p class="card-text">${pl.description }</p>
                                 <a href="ProductInformation.html">Xem chi tiết</a> <br>
-                                <a href=" #" class="btn btn-danger">MUA NGAY</a>
+                                <a href="${pageContext.request.contextPath}/cart/add/${pl.productID}.html" class="btn btn-danger">MUA NGAY</a>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card" style="width:100%">
-                            <img class="card-img-top" src="<c:url value="/resources/Image/Product/banh2.jpg"/>" alt="Card image" style="width:100%; height: 170px">
-                            <div class="card-body">
-                                <h4 class="card-title">BÁNH - KẸO 2</h4>
-                                <p class="card-text">Some example text some example text. John Doe is an architect and
-                                    engineer</p>
-                                <a href="#">Xem chi tiết</a> <br>
-                                <a href=" #" class="btn btn-danger">MUA NGAY</a>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card" style="width:100%">
-                            <img class="card-img-top" src="<c:url value="/resources/Image/Product/banh3.jpg"/>" alt="Card image" style="width:100%; height: 170px">
-                            <div class="card-body">
-                                <h4 class="card-title">BÁNH - KẸO 3</h4>
-                                <p class="card-text">Some example text some example text. John Doe is an architect and
-                                    engineer</p>
-                                <a href="#">Xem chi tiết</a> <br>
-                                <a href=" #" class="btn btn-danger">MUA NGAY</a>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card" style="width:100%">
-                            <img class="card-img-top" src="<c:url value="/resources/Image/Product/banh4.jpg"/>" alt="Card image" style="width: 100%; height: 170px">
-                            <div class="card-body">
-                                <h4 class="card-title">BÁNH - KẸO 4</h4>
-                                <p class="card-text">Some example text some example text. John Doe is an architect and
-                                    engineer</p>
-                                <a href="#">Xem chi tiết</a> <br>
-                                <a href=" #" class="btn btn-danger">MUA NGAY</a>
-                            </div>
-                        </div>
-                    </div>
+                    	</div>
+                    </c:forEach>
+                    
                 </div>
             </div>
         </div>

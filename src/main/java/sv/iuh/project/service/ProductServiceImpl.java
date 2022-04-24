@@ -72,4 +72,10 @@ public class ProductServiceImpl implements ProductService {
     public List<Product> getFilter(String brandId, String cateId, int minPrice, int maxPrice, String sort) {
         return productDao.getFilter(brandId, cateId, minPrice, maxPrice, sort);
     }
+
+	@Override
+	public List<Product> top4Product() {
+		
+		return productDao.top4Product();
+	}
 }

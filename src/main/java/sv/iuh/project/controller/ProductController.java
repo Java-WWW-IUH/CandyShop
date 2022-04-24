@@ -96,6 +96,7 @@ public class ProductController {
         mm.put("list", productService.getAll());
         mm.put("listbrand", productBrandService.getAll());
         mm.put("listcate", productCategoryService.getAll());
+       
         return "user/product";
     }
 

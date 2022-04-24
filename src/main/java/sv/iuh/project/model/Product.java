@@ -252,8 +252,11 @@ public class Product implements Serializable {
     }
 
     @Override
-    public String toString() {
-        return "sv.iuh.project.model.Product[ productID=" + productID + " ]";
-    }
+	public String toString() {
+		return "Product [productID=" + productID + ", productName=" + productName + ", price=" + price + ", quantity="
+				+ quantity + ", description=" + description + ", warranTyperiod=" + warranTyperiod + ", img=" + img
+				+ ", orderDetailList=" + orderDetailList + ", commentList=" + commentList + ", productBrandID="
+				+ productBrandID + ", productCategoryID=" + productCategoryID + "]";
+	}
     
 }

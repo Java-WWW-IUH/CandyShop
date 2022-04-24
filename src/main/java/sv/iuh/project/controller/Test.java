@@ -5,6 +5,8 @@
  */
 package sv.iuh.project.controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
 import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +34,11 @@ public class Test {
     public String viewHome(ModelMap mm, HttpSession session) {
         mm.put("listbrand", productBrandService.getAll());
         mm.put("newproduct", productService.getNewProduct());
+        mm.put("top4List", productService.top4Product());
+        List<Product> lists = productService.top4Product();
+        for(Product list : lists) {
+        	System.out.println("list" + list);
+        }
         return "user/dashboard";
     }
 

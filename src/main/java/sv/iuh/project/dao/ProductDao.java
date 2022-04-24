@@ -38,4 +38,6 @@ public interface ProductDao {
     public List<Product> getFilter(String brandId,String cateId, int minPrice, int maxPrice, String sort);
     
     public Long totalItem();
+    
+    public List<Product> top4Product();
 }
