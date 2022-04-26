@@ -1,6 +1,6 @@
 <%-- 
     Document   : login
-    Created on : May 23, 2021, 1:36:54 PM
+    Created on : March 23, 2022
     Author     : Tuan Khang
 --%>
 
@@ -21,7 +21,7 @@
     <body>
         <div class="container mt-3" style="width: 20%;padding-top: 50px;padding-bottom: 50px; border: 1px #DFE5E2 solid;border-radius:5% " align="center" >
             <img src="<c:url value="/resources/Image/LoadLogo.png"/>" style="border-radius: 50%"  width="20%"/>
-            <h4 align="center">Đăng Nhập Vào K2NShop</h4><br>
+            <h4 align="center">Đăng Nhập Vào CandyShop</h4><br>
             <c:catch var="mess">
                 <c:if test="${mess!=null}">
                     <div class="alert alert-danger">
@@ -60,10 +60,10 @@
         <footer style="background-color: black; color: white; height: 200px; padding-left: 50px; margin-top: 110px;">
             <div class="row">
                 <div class="col-9">
-                    <h4 style="padding-top: 20px;padding-bottom: 20px;">CỬA HÀNG MÁY ẢNH K2NCamShop</h4>
-                    <p class="pFooter">Địa chỉ: số 8 Nguyễn Văn Bảo, Phường 4, Quận Gò Vấp, TP Hồ Chí Minh</p>
-                    <p class="pFooter">Điện thoại: 0976553787 - Email: K2NCamShop@gmail.vn </p>
-                    <p class="pFooter">&copy Copyright 2021</p>
+                    <h4 style="padding-top: 20px;padding-bottom: 20px;">CỬA HÀNG BÁNH KẸO CANDY SHOP</h4>
+                    <p class="pFooter">Địa chỉ: số 12 Nguyễn Văn Bảo, Phường 4, Quận Gò Vấp, TP Hồ Chí Minh</p>
+                    <p class="pFooter">Điện thoại: 0819490540 - Email: CandyShop@gmail.vn </p>
+                    <p class="pFooter">&copy Copyright 2022</p>
                 </div>
                 <div class="col-3" style="padding-top: 20px;">
                     <a href=""><img src="../Image/Logo/fb.png" style="width: 10%;"></a>

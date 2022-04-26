@@ -28,6 +28,8 @@ public interface OrderManagementService {
     
     public List<OrderProduct> getOrdersUnpaid();
     
+    public List<OrderProduct> getOrdersPaid();
+    
     public List<OrderProduct> getOrderIdByUser(int id);
 
 }

@@ -1,6 +1,6 @@
 <%-- 
     Document   : dashboard
-    Created on : May 20, 2021, 9:59:59 AM
+    Created on : March 20, 2022
     Author     : Tuan Khang
 --%>
 
@@ -35,7 +35,7 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="d-sm-flex align-items-baseline report-summary-header">
-                                            <h5 class="font-weight-semibold">Tóm tắc</h5>
+                                            <h5 class="font-weight-semibold">Tóm tắt</h5>
 
                                         </div>
                                     </div>
@@ -139,8 +139,8 @@
             <!-- partial:partials/_footer.html -->
             <footer class="footer">
                 <div class="d-sm-flex justify-content-center justify-content-sm-between">
-                    <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2021
-                        K2ShopCam</span>
+                    <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2022
+                        CandyShop</span>
             </footer>
             <!-- partial -->
         </div>

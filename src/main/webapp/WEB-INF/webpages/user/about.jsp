@@ -1,7 +1,7 @@
 <%-- 
     Document   : about
-    Created on : May 23, 2021, 1:24:52 PM
-    Author     : Tuan Khang
+    Created on : March 26, 2022
+    Author     : Van Toan
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -35,7 +35,7 @@
                     <h4 style="margin-top: 30px;">VỀ CHÚNG TÔI</h4>
                     <div style="border-top: 5px solid green; margin-top: 20px; margin-bottom: 20px;"></div>
                     <p>
-                        K2HSHOPCAM là một trang web hàng đầu trong lĩnh vực cung cấp các thiết bị máy ảnh. Chúng tôi khẳng
+                        CandyShop là một trang web hàng đầu trong lĩnh vực cung cấp các sản phẩm bánh kẹo. Chúng tôi khẳng
                         định
                         sẽ
                         đem lại những trải nghiệm tuyệt vời cho quý khách
@@ -63,7 +63,7 @@
                     <div class="card" style="width:100%; margin-top: 10px;">
                         <img class="card-img-top" src="<c:url value="/resources/Image/person.jpg"/>" alt="Card image" style="width:100%">
                         <div class="card-body">
-                            <h4 class="card-title" align="center">Lê Tuấn Khang</h4>
+                            <h4 class="card-title" align="center">Lê Văn Toàn</h4>
                             <p class="card-text" align="center">Develop</p>
                         </div>
                     </div>
@@ -91,10 +91,10 @@
         <footer style="background-color: black; color: white; height: 200px; padding-left: 50px; margin-top: 10px;">
             <div class="row">
                 <div class="col-9">
-                    <h4 style="padding-top: 20px;padding-bottom: 20px;">CỬA HÀNG MÁY ẢNH K2NCamShop</h4>
-                    <p class="pFooter">Địa chỉ: số 8 Nguyễn Văn Bảo, Phường 4, Quận Gò Vấp, TP Hồ Chí Minh</p>
-                    <p class="pFooter">Điện thoại: 0976553787 - Email: K2NCamShop@gmail.vn </p>
-                    <p class="pFooter">&copy Copyright 2021</p>
+                    <h4 style="padding-top: 20px;padding-bottom: 20px;">CỬA HÀNG BÁNH KẸO CANDY SHOP</h4>
+                    <p class="pFooter">Địa chỉ: số 12 Nguyễn Văn Bảo, Phường 4, Quận Gò Vấp, TP Hồ Chí Minh</p>
+                    <p class="pFooter">Điện thoại: 0819490540 - Email: CandyShop@gmail.vn </p>
+                    <p class="pFooter">&copy Copyright 2022</p>
                 </div>
                 <div class="col-3" style="padding-top: 20px;">
                     <a href=""><img src="../Image/Logo/fb.png" style="width: 10%;"></a>

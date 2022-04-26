@@ -176,6 +176,29 @@ public class OrderManagementDAOImpl implements OrderManagementDao{
         }
         return null;
     } 
+    
+    @Override
+    public List<OrderProduct> getOrdersPaid(){
+    	Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = null;
+        try {
+            transaction = session.beginTransaction();         
+            Query query = session.createQuery("FROM OrderProduct WHERE statusOrder = :statusOrder");
+            query.setString("statusOrder", "Da thanh toan");
+            List<OrderProduct> list = query.list();
+            transaction.commit();
+            return list;
+        } catch (Exception ex) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            ex.printStackTrace();
+        } finally {
+           //            session.flush();
+            session.close();
+        }
+    	return null;
+    }
 
     @Override
     public List<OrderProduct> getOrderIdByUser(int id) {

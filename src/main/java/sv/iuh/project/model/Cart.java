@@ -5,10 +5,14 @@
  */
 package sv.iuh.project.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 /**
  *
  * @author Thanh Hoai
  */
+
 public class Cart{
 
    
