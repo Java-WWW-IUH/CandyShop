@@ -20,5 +20,7 @@ public interface OrderDetailDao {
     
     public boolean delete (OrderDetail orderDetail);
     
+    public boolean update(OrderDetail object);
+    
     public OrderDetail findById(int id);
 }

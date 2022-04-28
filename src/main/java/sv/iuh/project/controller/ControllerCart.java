@@ -212,7 +212,7 @@ public class ControllerCart {
         }
         OrderProduct orderProduct = new OrderProduct();
         orderProduct.setDateOrder(new Date());
-        orderProduct.setStatusOrder("Chua thanh toan");
+        orderProduct.setStatusOrder("Chưa thanh toán");
         UserShop userShop = (UserShop) session.getAttribute("userlogin");
         orderProduct.setUserID(userShop);
         orderProduct.setTotalMoney(totalPrice(cartItems));
@@ -222,7 +222,7 @@ public class ControllerCart {
             orderDetail.setOrderID(orderProduct);
             orderDetail.setProductID(entry.getValue().getProduct());
             orderDetail.setQuantity(entry.getValue().getQuantity());
-            orderDetail.setStatusOrderDetail("Chua thanh toan");
+            orderDetail.setStatusOrderDetail("Chưa thanh toán");
             orderDetail.setDateOrder(new Date());
             orderDetail.tinhTien();
             orderDetailService.create(orderDetail);

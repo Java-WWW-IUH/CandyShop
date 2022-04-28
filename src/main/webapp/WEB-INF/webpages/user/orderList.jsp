@@ -15,8 +15,6 @@
         <link href="<c:url value="/resources/Css/Header.css"/>" rel='stylesheet' type='text/css'/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-        <link href="<c:url value="/resources/Css/Header.css"/>" rel='stylesheet' type='text/css'/>
-        <link href="<c:url value="/resources/Css/body.css"/>" rel='stylesheet' type='text/css'/>
         <link rel="icon" href="<c:url value="/resources/Image/LoadLogo.png"/>">
         <script src="https://kit.fontawesome.com/041bd10679.js" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -40,6 +38,7 @@
                         <th style="font-weight: bold;">Giá</th>
                         <th style="font-weight: bold;">Tổng tiền</th>
                         <th style="font-weight: bold;">Trạng thái</th>
+                         <th></th>
                         <th></th>
                     </tr>
                 </thead>
@@ -53,6 +52,16 @@
                             <td>${od.productID.price}</td>
                             <td><fmt:formatNumber type = "number" maxFractionDigits = "3" value = "${od.total}" /></td>
                             <td>${od.statusOrderDetail}</td>
+                            <td>
+                            <a class="nav-link " target="_blank" href="<c:url value="/payment/?id=${od.orderDetailId}"/>">
+	                             <c:if test="${od.statusOrderDetail != 'Đã thanh toán'}">
+	                             	<button type="button" class="btn btn-danger">Thanh Toán</button>
+	                             </c:if>
+	                             <c:if test="${od.statusOrderDetail == 'Đã thanh toán'}">
+	                             	<button type="button" disabled class="btn btn-danger">Thanh Toán</button>
+	                             </c:if>
+                        </a>
+                            </td>
                             <td>
                                 <a href="#" class="delete" data-toggle="modal" data-target="#myModalDelete">
                                     <i class="fas fa-trash" style="color: red" data-toggle="tooltip" title="Delete"></i>

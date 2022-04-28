@@ -40,5 +40,11 @@ public class OrderDetailServiceImpl implements OrderDetailService{
     public OrderDetail findById(int id) {
         return orderDetailDao.findById(id);
     }
+
+	@Override
+	public boolean update(OrderDetail object) {
+		// TODO Auto-generated method stub
+		return orderDetailDao.update(object);
+	}
   
 }
