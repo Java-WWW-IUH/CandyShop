@@ -255,8 +255,8 @@ public class ControllerCart {
     	request.setCharacterEncoding("UTF-8");
     	String name = request.getParameter("uname" );
     	String phone = request.getParameter("utel" );
-    	String city = request.getParameter("city");
-    	String district = request.getParameter("district" );
+    	String city = request.getParameter("calc_shipping_provinces");
+    	String district = request.getParameter("calc_shipping_district" );
     	String ward = request.getParameter("ward" );
     	String address = request.getParameter("uaddress");
     	UserShop sessionUser = (UserShop) session.getAttribute("userlogin");

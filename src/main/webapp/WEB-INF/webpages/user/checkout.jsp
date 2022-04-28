@@ -84,8 +84,7 @@ li {
 										<a
 											href="<c:url value="/product/detail?id=${map.value.product.productID}"/>"
 											style="color: black;"><c:out
-												value="${map.value.product.productName}" /></a> <br />
-										<br />
+												value="${map.value.product.productName}" /></a> <br /> <br />
 										<div class="row" style="margin-right: -60px;">
 											<p style="color: red; font-weight: bold; margin-left: 20px">
 												<c:out value="${map.value.quantity}" />
@@ -179,21 +178,16 @@ li {
 								<div class="invalid-feedback">Please fill out this field.</div>
 							</div>
 							<div class="form-group">
-								<label for="province">Tỉnh/Thành phố:</label> <select
-									class="form-control" id="province" name="city">
-									<option>Hà Nội</option>
-									<option>Thành phố Hồ Chí Minh</option>
-									<option>Đã Nẵng</option>
-									<option>Nha Trang</option>
+								<label for="calc_shipping_provinces">Tỉnh/Thành phố:</label> <select
+									class="form-control" name="calc_shipping_provinces" required=""
+									id="calc_shipping_provinces">
+									<option value="tinh">Tỉnh / Thành phố</option>
 								</select>
 							</div>
 							<div class="form-group">
-								<label for="district">Quận/Huyện:</label> <select
-									class="form-control" id="district" name="district">
-									<option>Quận 1</option>
-									<option>Quận 2</option>
-									<option>Quận 3</option>
-									<option>Quận 4</option>
+								<label for="calc_shipping_district">Quận/Huyện:</label> <select
+									class="form-control" id="calc_shipping_district"
+									name="calc_shipping_district">
 								</select>
 							</div>
 							<div class="form-group">
@@ -203,6 +197,10 @@ li {
 									<option>Phường 2</option>
 									<option>Phường 3</option>
 									<option>Phường 4</option>
+									<option>Phường 5</option>
+									<option>Phường 6</option>
+									<option>Phường 7</option>
+									<option>Phường 8</option>
 								</select>
 							</div>
 							<div class="form-group">
@@ -249,26 +247,211 @@ li {
 		</div>
 	</footer>
 </body>
-
+<script
+	src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script src="https://kit.fontawesome.com/041bd10679.js"
+	crossorigin="anonymous"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script
+	src='https://cdn.jsdelivr.net/gh/vietblogdao/js/districts.min.js'></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script
+	src='https://cdn.jsdelivr.net/gh/vietblogdao/js/districts.min.js'></script>
+<script>
+	//<![CDATA[
+	if (address_2 = localStorage.getItem('address_2_saved')) {
+		$('select[name="calc_shipping_district"] option').each(function() {
+			if ($(this).text() == address_2) {
+				$(this).attr('selected', '')
+			}
+		})
+		$('input.billing_address_2').attr('value', address_2)
+	}
+	if (district = localStorage.getItem('district')) {
+		$('select[name="calc_shipping_district"]').html(district)
+		$('select[name="calc_shipping_district"]').on(
+				'change',
+				function() {
+					var target = $(this).children('option:selected')
+					target.attr('selected', '')
+					$('select[name="calc_shipping_district"] option').not(
+							target).removeAttr('selected')
+					address_2 = target.text()
+					$('input.billing_address_2').attr('value', address_2)
+					district = $('select[name="calc_shipping_district"]')
+							.html()
+					localStorage.setItem('district', district)
+					localStorage.setItem('address_2_saved', address_2)
+				})
+	}
+	$('select[name="calc_shipping_provinces"]')
+			.each(
+					function() {
+						var $this = $(this), stc = ''
+						c
+								.forEach(function(i, e) {
+									e += +1
+									stc += '<option value=' + e + '>' + i
+											+ '</option>'
+									$this
+											.html('<option value="">Tỉnh / Thành phố</option>'
+													+ stc)
+									if (address_1 = localStorage
+											.getItem('address_1_saved')) {
+										$(
+												'select[name="calc_shipping_provinces"] option')
+												.each(
+														function() {
+															if ($(this).text() == address_1) {
+																$(this)
+																		.attr(
+																				'selected',
+																				'')
+															}
+														})
+										$('input.billing_address_1').attr(
+												'value', address_1)
+									}
+									$this
+											.on(
+													'change',
+													function(i) {
+														i = $this
+																.children(
+																		'option:selected')
+																.index() - 1
+														var str = '', r = $this
+																.val()
+														if (r != '') {
+															arr[i]
+																	.forEach(function(
+																			el) {
+																		str += '<option value="' + el + '">'
+																				+ el
+																				+ '</option>'
+																		$(
+																				'select[name="calc_shipping_district"]')
+																				.html(
+																						'<option value="">Quận / Huyện</option>'
+																								+ str)
+																	})
+															var address_1 = $this
+																	.children(
+																			'option:selected')
+																	.text()
+															var district = $(
+																	'select[name="calc_shipping_district"]')
+																	.html()
+															localStorage
+																	.setItem(
+																			'address_1_saved',
+																			address_1)
+															localStorage
+																	.setItem(
+																			'district',
+																			district)
+															$(
+																	'select[name="calc_shipping_district"]')
+																	.on(
+																			'change',
+																			function() {
+																				var target = $(
+																						this)
+																						.children(
+																								'option:selected')
+																				target
+																						.attr(
+																								'selected',
+																								'')
+																				$(
+																						'select[name="calc_shipping_district"] option')
+																						.not(
+																								target)
+																						.removeAttr(
+																								'selected')
+																				var address_2 = target
+																						.text()
+																				$(
+																						'input.billing_address_2')
+																						.attr(
+																								'value',
+																								address_2)
+																				district = $(
+																						'select[name="calc_shipping_district"]')
+																						.html()
+																				localStorage
+																						.setItem(
+																								'district',
+																								district)
+																				localStorage
+																						.setItem(
+																								'address_2_saved',
+																								address_2)
+																			})
+														} else {
+															$(
+																	'select[name="calc_shipping_district"]')
+																	.html(
+																			'<option value="">Quận / Huyện</option>')
+															district = $(
+																	'select[name="calc_shipping_district"]')
+																	.html()
+															localStorage
+																	.setItem(
+																			'district',
+																			district)
+															localStorage
+																	.removeItem(
+																			'address_1_saved',
+																			address_1)
+														}
+													})
+								})
+					})
+			//]]>
+</script>
 <script>
 	// Disable form submissions if there are invalid fields
-	(function() {
-		'use strict';
-		window.addEventListener('load', function() {
-			// Get the forms we want to add validation styles to
-			var forms = document.getElementsByClassName('needs-validation');
-			// Loop over them and prevent submission
-			var validation = Array.prototype.filter.call(forms, function(form) {
-				form.addEventListener('submit', function(event) {
-					if (form.checkValidity() === false) {
-						event.preventDefault();
-						event.stopPropagation();
-					}
-					form.classList.add('was-validated');
-				}, false);
-			});
-		}, false);
-	})();
+			(
+					function() {
+						'use strict';
+						window
+								.addEventListener(
+										'load',
+										function() {
+											// Get the forms we want to add validation styles to
+											var forms = document
+													.getElementsByClassName('needs-validation');
+											// Loop over them and prevent submission
+											var validation = Array.prototype.filter
+													.call(
+															forms,
+															function(form) {
+																form
+																		.addEventListener(
+																				'submit',
+																				function(
+																						event) {
+																					if (form
+																							.checkValidity() === false) {
+																						event
+																								.preventDefault();
+																						event
+																								.stopPropagation();
+																					}
+																					form.classList
+																							.add('was-validated');
+																				},
+																				false);
+															});
+										}, false);
+					})();
 </script>
 
 </html>
