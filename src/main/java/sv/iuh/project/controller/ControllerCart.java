@@ -5,6 +5,7 @@
  */
 package sv.iuh.project.controller;
 
+import java.io.UnsupportedEncodingException;
 import java.sql.Timestamp;
 import java.util.Date;
 import java.util.HashMap;
@@ -17,6 +18,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -28,6 +30,7 @@ import sv.iuh.project.model.UserShop;
 import sv.iuh.project.service.OrderDetailService;
 import sv.iuh.project.service.OrderManagementService;
 import sv.iuh.project.service.ProductService;
+import sv.iuh.project.service.UserService;
 
 /**
  *
@@ -36,6 +39,9 @@ import sv.iuh.project.service.ProductService;
 @Controller
 @RequestMapping(value = "/cart")
 public class ControllerCart {
+	
+	@Autowired
+	private UserService userService;
 
     @Autowired
     private ProductService productService;
@@ -243,5 +249,34 @@ public class ControllerCart {
             count += list.getValue().getProduct().getPrice() * list.getValue().getQuantity();
         }
         return count;
+    }
+    @PostMapping("/SaveUser")
+    public String cartSaveUser(ModelMap mm, HttpSession session, HttpServletRequest request) throws UnsupportedEncodingException {
+    	request.setCharacterEncoding("UTF-8");
+    	String name = request.getParameter("uname" );
+    	String phone = request.getParameter("utel" );
+    	String city = request.getParameter("city");
+    	String district = request.getParameter("district" );
+    	String ward = request.getParameter("ward" );
+    	String address = request.getParameter("uaddress");
+    	UserShop sessionUser = (UserShop) session.getAttribute("userlogin");
+    	UserShop userShop = new UserShop();
+    	int id = sessionUser.getUserID();
+    	userShop.setUserID(id);
+    	userShop.setFullName(name);
+    	userShop.setBirthday(sessionUser.getBirthday());
+    	userShop.setEmail(sessionUser.getEmail());
+    	userShop.setImg(sessionUser.getImg());
+    	userShop.setPassword(sessionUser.getPassword());
+    	userShop.setRole(sessionUser.getRole());
+    	userShop.setActive(sessionUser.getActive());
+    	userShop.setUsername(sessionUser.getUsername());
+    	userShop.setPhoneNumber(phone);
+    	userShop.setAddress(address + " " + ward + " " + district + " "  + city);
+    	sessionUser.setFullName(name);
+    	sessionUser.setPhoneNumber(phone);
+    	sessionUser.setAddress(address + " " + ward + " " + district + " "  + city);
+    	userService.update(userShop);
+    	return "redirect:/cart/checkoutshow" ;
     }
 }
