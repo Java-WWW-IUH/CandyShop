@@ -81,7 +81,7 @@
                             <div class="card-body">
                                 <h4 class="card-title">${pl.productName}</h4>
                                 <p class="card-text">${pl.description }</p>
-                                <a href="ProductInformation.html">Xem chi tiết</a> <br>
+                                <a href="<c:url value="/product/detail?id=${pl.productID}"/>">Xem chi tiết</a> <br>
                                 <a href="${pageContext.request.contextPath}/cart/add/${pl.productID}.html" class="btn btn-danger">MUA NGAY</a>
                             </div>
                         </div>
