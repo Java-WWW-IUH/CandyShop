@@ -47,6 +47,31 @@ public class ProductCategoryController {
         return "admin/productcategoryform";
     }
 
+    @RequestMapping(value = "/search", method = RequestMethod.GET)
+    public String viewSearch(ModelMap mm, HttpSession session, @RequestParam("productcategoryfilter") int id, @RequestParam(required = true) String productCategoryName) {
+        UserShop userShop = (UserShop) session.getAttribute("userlogin");
+        if (userShop != null) {
+            if (userShop.getRole().equals("user")) {
+                return "redirect:/";
+            }
+            if (userShop.getRole().equals("admin")) {
+                if (productCategoryName == "" && id == 0) {
+                    return "redirect:/productcategory/show";
+                } else {
+                    mm.put("list", productCategoryService.getListByCategory(id, productCategoryName));
+                    mm.put("listcategory", productCategoryService.getAll());
+                    mm.put("category", productCategoryService.findById(id));
+                    mm.put("s", productCategoryName);
+                    return "admin/productcategorymanage";
+                }
+            } else {
+                return "redirect:/";
+            }
+        } else {
+            return "redirect:/";
+        }
+
+    }
     @RequestMapping(value = "save", method = RequestMethod.POST)
     public String viewProductSave(ModelMap mm, HttpSession session, HttpServletRequest request) throws UnsupportedEncodingException {
         String link = adminDashboard(session);

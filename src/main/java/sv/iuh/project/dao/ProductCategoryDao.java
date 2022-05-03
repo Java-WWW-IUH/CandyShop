@@ -6,6 +6,8 @@
 package sv.iuh.project.dao;
 
 import java.util.List;
+
+import sv.iuh.project.model.Product;
 import sv.iuh.project.model.ProductCategory;
 
 /**
@@ -26,4 +28,6 @@ public interface ProductCategoryDao {
 
     // load list category
     public List<ProductCategory> getAll();
+    
+    public List<ProductCategory> getListByCategory(int categoryId, String name);
 }

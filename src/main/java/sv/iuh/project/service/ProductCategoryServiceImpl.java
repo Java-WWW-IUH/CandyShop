@@ -46,4 +46,9 @@ public class ProductCategoryServiceImpl implements ProductCategoryService{
     public List<ProductCategory> getAll() {
         return productCategoryDao.getAll();
     }
+    
+    @Override
+    public List<ProductCategory> getListByCategory(int categoryId, String productCategoryName){
+    	return productCategoryDao.getListByCategory(categoryId, productCategoryName);
+    }
 }

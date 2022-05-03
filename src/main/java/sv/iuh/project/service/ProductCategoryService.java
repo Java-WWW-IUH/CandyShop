@@ -6,6 +6,8 @@
 package sv.iuh.project.service;
 
 import java.util.List;
+
+import sv.iuh.project.model.Product;
 import sv.iuh.project.model.ProductCategory;
 
 /**
@@ -27,4 +29,6 @@ public interface ProductCategoryService {
 
     // load list category
     public List<ProductCategory> getAll();
+    
+    public List<ProductCategory> getListByCategory(int categoryId, String name);
 }

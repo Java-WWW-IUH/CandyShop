@@ -55,6 +55,10 @@ public class OrderManagementServiceImpl implements OrderManagementService{
     public List<OrderProduct> getOrdersUnpaid() {
         return orderManagementDao.getOrdersUnpaid();
     }
+    
+    public List<OrderProduct> getOrdersPaid(){
+    	return orderManagementDao.getOrdersPaid();
+    }
 
     @Override
     public List<OrderProduct> getOrderIdByUser(int id) {
