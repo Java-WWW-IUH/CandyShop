@@ -1,7 +1,7 @@
 <%-- 
-    Document   : dashboard
-    Created on : May 20, 2021, 9:59:59 AM
-    Author     : Tuan Khang
+    Document   : productbrandform
+    Created on : March 20, 2022
+    Author     : Van Toan
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

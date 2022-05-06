@@ -1,6 +1,6 @@
 <%-- 
     Document   : Header
-    Created on : May 20, 2021, 11:46:20 AM
+    Created on : March 20, 2022
     Author     : Tuan Khang
 --%>
 
@@ -29,7 +29,7 @@
         <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
             <div class="navbar-brand-wrapper d-flex align-items-center">
                 <a class="navbar-brand brand-logo" href="<c:url value="/admin"/>">
-                    <h3 style="color: white;">K2NCamShop</h3>
+                    <h3 style="color: white;">CandyShop</h3>
 
                 </a>
                 <a class="navbar-brand brand-logo-mini" href="index.html"><img src="<c:url value="/resources/images/K2NCamShop.png"/>" alt="logo" /></a>
