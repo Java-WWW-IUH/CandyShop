@@ -21,7 +21,7 @@
         <link rel="stylesheet" href="<c:url value="/resources/vendors/daterangepicker/daterangepicker.css"/>" rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="<c:url value="/resources/vendors/chartist/chartist.min.css"/>" rel='stylesheet' type='text/css'>
 
-        <link rel="icon" href="<c:url value="/resources/images/LoadLogo.png"/>">
+        <link rel="icon" href="<c:url value="/resources/Image/LOGOSHOP.jpg"/>">
     </head>
     <body>
         <!-- partial -->

@@ -72,7 +72,7 @@
         </div>
         <div class="container" align="center">
             <div class="container-fluid">
-                <div class="row">
+                <div class="row" style="display: flex; justify-content: center;">
                  <c:forEach items="${top4List}" var="pl">
                     <div class="col-3">
                       

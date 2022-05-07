@@ -20,7 +20,7 @@
     </head>
     <body>
         <div class="container mt-3" style="width: 20%;padding-top: 50px;padding-bottom: 50px; border: 1px #DFE5E2 solid;border-radius:5% " align="center" >
-            <img src="<c:url value="/resources/Image/LoadLogo.png"/>" style="border-radius: 50%"  width="20%"/>
+            <img src="<c:url value="/resources/Image/LOGOSHOP.jpg"/>" style="border-radius: 50%"  width="20%"/>
             <h4 align="center">Đăng Nhập Vào CandyShop</h4><br>
             <c:catch var="mess">
                 <c:if test="${mess!=null}">
@@ -66,9 +66,9 @@
                     <p class="pFooter">&copy Copyright 2021</p>
                 </div>
                 <div class="col-3" style="padding-top: 20px;">
-                    <a href=""><img src="../Image/Logo/fb.png" style="width: 10%;"></a>
-                    <a href=""><img src="../Image/Logo/yt.png" style="width: 10%;"></a>
-                    <a href=""><img src="../Image/Logo/ins.png" style="width: 10%;"></a>
+                    <a href=""><img src="<c:url value="/resources/Image/Logo/fb.png"/>" style="width: 10%;"></a>
+                    <a href=""><img src="<c:url value="/resources/Image/Logo/yt.png"/>" style="width: 10%;"></a>
+                    <a href=""><img src="<c:url value="/resources/Image/Logo/ins.png"/>" style="width: 10%;"></a>
                 </div>
             </div>
         </footer>

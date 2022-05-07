@@ -40,7 +40,7 @@
             <div class="col-12">
                 <div class="container"  style="width: 50%;border: 1px #DFE5E2 solid;border-radius:5%; height: auto" >
                     <div align="center ">
-                        <img src="<c:url value="/resources/Image/LoadLogo.png"/>" style="border-radius: 50%"  width="10%" />
+                        <img src="<c:url value="/resources/Image/LOGOSHOP.jpg"/>" style="border-radius: 50%"  width="10%" />
                         <div class="title">ĐĂNG KÍ</div>
                     </div>
 
@@ -161,9 +161,9 @@
                 <p class="pFooter">&copy Copyright 2022</p>
             </div>
             <div class="col-3" style="padding-top: 20px;">
-                <a href=""><img src="../Image/Logo/fb.png" style="width: 10%;"></a>
-                <a href=""><img src="../Image/Logo/yt.png" style="width: 10%;"></a>
-                <a href=""><img src="../Image/Logo/ins.png" style="width: 10%;"></a>
+                <a href=""><img src="<c:url value="/resources/Image/Logo/fb.png"/>" style="width: 10%;"></a>
+                    <a href=""><img src="<c:url value="/resources/Image/Logo/yt.png"/>" style="width: 10%;"></a>
+                    <a href=""><img src="<c:url value="/resources/Image/Logo/ins.png"/>" style="width: 10%;"></a>
             </div>
         </div>
     </footer>

@@ -165,9 +165,9 @@
                     <p class="pFooter">&copy Copyright 2022</p>
                 </div>
                 <div class="col-3" style="padding-top: 20px;">
-                    <a href=""><img src="../Image/Logo/fb.png" style="width: 10%;"></a>
-                    <a href=""><img src="../Image/Logo/yt.png" style="width: 10%;"></a>
-                    <a href=""><img src="../Image/Logo/ins.png" style="width: 10%;"></a>
+                    <a href=""><img src="<c:url value="/resources/Image/Logo/fb.png"/>" style="width: 10%;"></a>
+                    <a href=""><img src="<c:url value="/resources/Image/Logo/yt.png"/>" style="width: 10%;"></a>
+                    <a href=""><img src="<c:url value="/resources/Image/Logo/ins.png"/>" style="width: 10%;"></a>
                 </div>
             </div>
         </footer>

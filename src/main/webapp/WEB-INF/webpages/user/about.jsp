@@ -59,16 +59,7 @@
                 <div class="col-6">
 
                 </div>
-                <div class="col-3">
-                    <div class="card" style="width:100%; margin-top: 10px;">
-                        <img class="card-img-top" src="<c:url value="/resources/Image/person.jpg"/>" alt="Card image" style="width:100%">
-                        <div class="card-body">
-                            <h4 class="card-title" align="center">Lê Tuấn Khang</h4>
-                            <p class="card-text" align="center">Develop</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
+                <div class="col-2">
                     <div class="card" style="width:100%; margin-top: 10px;">
                         <img class="card-img-top" src="<c:url value="/resources/Image/person.jpg"/>" alt="Card image" style="width:100%">
                         <div class="card-body">
@@ -77,7 +68,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-2">
+                    <div class="card" style="width:100%; margin-top: 10px;">
+                        <img class="card-img-top" src="<c:url value="/resources/Image/person.jpg"/>" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title" align="center">Bùi Thành Nam</h4>
+                            <p class="card-text" align="center">Develop</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
                     <div class="card" style="width:100%; margin-top: 10px;">
                         <img class="card-img-top" src="<c:url value="/resources/Image/person.jpg"/>" alt="Card image" style="width:100%">
                         <div class="card-body">
@@ -86,11 +86,20 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-2">
                     <div class="card" style="width:100%; margin-top: 10px;">
                         <img class="card-img-top" src="<c:url value="/resources/Image/person.jpg"/>" alt="Card image" style="width:100%">
                         <div class="card-body">
                             <h4 class="card-title" align="center">Lê Văn Toàn</h4>
+                            <p class="card-text" align="center">Develop</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="card" style="width:100%; margin-top: 10px;">
+                        <img class="card-img-top" src="<c:url value="/resources/Image/person.jpg"/>" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title" align="center">Hồ Dương Vũ</h4>
                             <p class="card-text" align="center">Develop</p>
                         </div>
                     </div>
@@ -106,9 +115,9 @@
                     <p class="pFooter">&copy Copyright 2022</p>
                 </div>
                 <div class="col-3" style="padding-top: 20px;">
-                    <a href=""><img src="../Image/Logo/fb.png" style="width: 10%;"></a>
-                    <a href=""><img src="../Image/Logo/yt.png" style="width: 10%;"></a>
-                    <a href=""><img src="../Image/Logo/ins.png" style="width: 10%;"></a>
+                    <a href=""><img src="<c:url value="/resources/Image/Logo/fb.png"/>" style="width: 10%;"></a>
+                    <a href=""><img src="<c:url value="/resources/Image/Logo/yt.png"/>" style="width: 10%;"></a>
+                    <a href=""><img src="<c:url value="/resources/Image/Logo/ins.png"/>" style="width: 10%;"></a>
                 </div>
             </div>
         </footer>

@@ -21,7 +21,7 @@
         <link rel="stylesheet" href="<c:url value="/resources/vendors/daterangepicker/daterangepicker.css"/>" rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="<c:url value="/resources/vendors/chartist/chartist.min.css"/>" rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-        <link rel="icon" href="<c:url value="/resources/images/LoadLogo.png"/>">
+        <link rel="icon" href="<c:url value="/resources/Image/LOGOSHOP.jpg"/>">
         <script src="https://kit.fontawesome.com/041bd10679.js" crossorigin="anonymous"></script>
     </head>
     <body>

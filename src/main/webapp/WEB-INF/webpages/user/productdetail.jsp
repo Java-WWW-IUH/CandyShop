@@ -230,6 +230,9 @@
             <li class="nav-item">
                 <a class="nav-link active" style="color: black" data-toggle="tab" href="#home">Bình luận</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" style="color: black" href="#menu1">Chi tiết sản phẩm</a>
+            </li>
         </ul>
 
         <!-- Tab panes -->
@@ -337,6 +340,36 @@
                     </form>
                 </c:if>
             </div>
+            <div id="menu1" class="tab-pane fade"><br>
+                <div class="container-custom"><h6>THÔNG TIN SẢN PHẨM</h6></div>
+                <c:catch var="p">
+                    <div class="container-custom" style="width: 40%;margin-left:9%;">
+                        <table class="table table-striped" style="border:1px #D2D2D2 solid">
+                            <tr>
+                                <td>Tên sản phẩm</td>
+                                <td>${p.productName}</td>
+                            </tr>
+                            <tr>
+                                <td>Giá sản phẩm</td>
+                                <td>${p.price}</td>
+                            </tr>
+                            <tr>
+                                <td>Thời hạn sử dụng</td>
+                                <td>${p.warranTyperiod}</td>
+                            </tr>
+                            <tr>
+                                <td>Hãng sản xuất</td>
+                                <td>${p.productBrandID.productBrandName}</td>
+                            </tr>
+                            <tr>
+                                <td>Loại </td>
+                                <td>${p.productCategoryID.productCategoryName}</td>
+                            </tr>
+                        </table>
+                    </c:catch>
+                </div>
+            </div>
+        </div>
           </div>
     </div>
 
@@ -350,9 +383,9 @@
                 <p class="pFooter">&copy Copyright 2022</p>
             </div>
             <div class="col-3" style="padding-top: 20px;">
-                <a href=""><img src="../Image/Logo/fb.png" style="width: 10%;"></a>
-                <a href=""><img src="../Image/Logo/yt.png" style="width: 10%;"></a>
-                <a href=""><img src="../Image/Logo/ins.png" style="width: 10%;"></a>
+                <a href=""><img src="<c:url value="/resources/Image/Logo/fb.png"/>" style="width: 10%;"></a>
+                    <a href=""><img src="<c:url value="/resources/Image/Logo/yt.png"/>" style="width: 10%;"></a>
+                    <a href=""><img src="<c:url value="/resources/Image/Logo/ins.png"/>" style="width: 10%;"></a>
             </div>
         </div>
     </footer>
