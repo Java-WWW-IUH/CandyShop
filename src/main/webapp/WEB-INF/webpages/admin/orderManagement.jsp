@@ -36,6 +36,7 @@
                         <button class="tablinks" onclick="showContent(event, 'AllOrders')" id="defaultOpen">Tất cả đơn hàng</button>
                         <button class="tablinks" onclick="showContent(event, 'NewOrders')">Đơn hàng mới</button>
                         <button class="tablinks" onclick="showContent(event, 'Unpaid')">Chưa thanh toán</button>
+                        <button class="tablinks" onclick="showContent(event, 'Paid')">Đã thanh toán</button>
                     </div>
 
                     <div id="AllOrders" class="tabcontent">
@@ -125,6 +126,42 @@
                             </thead>
                             <tbody>
                                 <c:forEach items="${unpaidlist}" var="od">
+                                    <tr class="onRow">
+                                        <td>${od.orderID}</td>
+                                        <td>${od.dateOrder}</td>
+                                        <td>${od.userID.fullName}</td>
+                                        <td>${od.statusOrder}</td>
+                                        <td><fmt:formatNumber type = "number" maxFractionDigits = "3" value = "${od.totalMoney}" /></td>
+
+                                        <td>
+                                            <a class="detail" href="<c:url value="/orderManagement/orderDetailManagement/${od.orderID}.html" />">xem chi tiết</a>
+                                        </td>
+                                        <td>
+                                            <a href="#" class="delete" data-toggle="modal" data-target="#myModalDelete">
+                                                <i class="fas fa-trash" style="color: red" data-toggle="tooltip" title="Delete"></i>
+                                            </a>                 
+                                        </td>
+                                    </tr>
+                                </c:forEach>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div id="Paid" class="tabcontent">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th style="font-weight: bold;">Mã</th>
+                                    <th style="font-weight: bold;">Ngày đặt</th>
+                                    <th style="font-weight: bold;">Khách hàng</th>
+                                    <th style="font-weight: bold;">Thanh toán</th>
+                                    <th style="font-weight: bold;">Tổng tiền</th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <c:forEach items="${paidlist}" var="od">
                                     <tr class="onRow">
                                         <td>${od.orderID}</td>
                                         <td>${od.dateOrder}</td>
