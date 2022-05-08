@@ -27,4 +27,6 @@ public interface ProductCategoryService {
 
     // load list category
     public List<ProductCategory> getAll();
+    
+    public List<ProductCategory> getListByCategory(int id, String productCategoryName);
 }
