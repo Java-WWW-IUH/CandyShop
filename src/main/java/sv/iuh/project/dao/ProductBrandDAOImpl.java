@@ -17,7 +17,7 @@ import sv.iuh.project.util.HibernateUtil;
 
 /**
  *
- * @author Thanh Hoai
+ * @author VanToan
  */
 @Repository
 public class ProductBrandDAOImpl implements ProductBrandDao {

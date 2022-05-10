@@ -1,7 +1,7 @@
 <%-- 
-    Document   : productbrandform
+    Document   : dashboard
     Created on : March 20, 2022
-    Author     : Van Toan
+    Author     : VanToan
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -19,7 +19,7 @@
         <link rel="stylesheet" href="<c:url value="/resources/vendors/flag-icon-css/css/flag-icon.min.css"/>" rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="<c:url value="/resources/vendors/daterangepicker/daterangepicker.css"/>" rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="<c:url value="/resources/vendors/chartist/chartist.min.css"/>" rel='stylesheet' type='text/css'>
-        <link rel="icon" href="<c:url value="/resources/Image/LOGOSHOP.jpg"/>">
+        <link rel="icon" href="<c:url value="/resources/images/LoadLogo.png"/>">
     </head>
 
     <body>

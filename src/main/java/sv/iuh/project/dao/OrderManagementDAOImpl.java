@@ -161,7 +161,7 @@ public class OrderManagementDAOImpl implements OrderManagementDao{
         try {
             transaction = session.beginTransaction();         
             Query query = session.createQuery("FROM OrderProduct WHERE statusOrder = :statusOrder");
-            query.setString("statusOrder", "Chưa thanh toán");
+            query.setString("statusOrder", "Chua thanh toan");
             List<OrderProduct> list = query.list();
             transaction.commit();
             return list;
@@ -184,7 +184,7 @@ public class OrderManagementDAOImpl implements OrderManagementDao{
         try {
             transaction = session.beginTransaction();         
             Query query = session.createQuery("FROM OrderProduct WHERE statusOrder = :statusOrder");
-            query.setString("statusOrder", "Đã thanh toán");
+            query.setString("statusOrder", "Da thanh toan");
             List<OrderProduct> list = query.list();
             transaction.commit();
             return list;

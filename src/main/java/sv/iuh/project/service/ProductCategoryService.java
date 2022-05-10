@@ -12,7 +12,7 @@ import sv.iuh.project.model.ProductCategory;
 
 /**
  *
- * @author Thanh Hoai
+ * @author VanToan
  */
 public interface ProductCategoryService {
     // create

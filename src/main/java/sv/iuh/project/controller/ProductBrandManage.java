@@ -25,7 +25,7 @@ import sv.iuh.project.service.ProductBrandService;
 
 /**
  *
- * @author Thanh Hoai
+ * @author VanToan
  */
 @Controller
 @RequestMapping("/productbrand")

@@ -14,7 +14,7 @@ import sv.iuh.project.model.ProductBrand;
 
 /**
  *
- * @author Thanh Hoai
+ * @author VanToan
  */
 @Service
 public class ProductBrandServiceImpl implements ProductBrandService{

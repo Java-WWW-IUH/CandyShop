@@ -22,7 +22,7 @@ import sv.iuh.project.service.ProductCategoryService;
 
 /**
  *
- * @author Thanh Hoai
+ * @author VanToan
  */
 @Controller
 @RequestMapping("/productcategory")
@@ -84,7 +84,7 @@ public class ProductCategoryController {
         if (request.getParameter("id") == "") {
             productCategoryService.create(productCategory);
             mm.put("listProductCategory", productCategoryService.getAll());
-            mm.put("success", "ThÃªm thÃ nh cÃ´ng");
+            mm.put("success", "Thêm thành công");
             return "admin/productcategoryform";
         } else {
             int id = Integer.parseInt(request.getParameter("id"));

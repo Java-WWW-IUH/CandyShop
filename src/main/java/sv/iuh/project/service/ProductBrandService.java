@@ -11,7 +11,7 @@ import sv.iuh.project.model.ProductBrand;
 
 /**
  *
- * @author Thanh Hoai
+ * @author VanToan
  */
 public interface ProductBrandService {
     // create

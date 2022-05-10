@@ -15,7 +15,7 @@ import sv.iuh.project.model.ProductCategory;
 
 /**
  *
- * @author Thanh Hoai
+ * @author VanToan
  */
 @Service
 public class ProductCategoryServiceImpl implements ProductCategoryService{

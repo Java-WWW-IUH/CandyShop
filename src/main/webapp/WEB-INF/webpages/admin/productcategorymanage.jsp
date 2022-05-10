@@ -51,16 +51,19 @@
 				<div class="row">
 					<div class="col-3">
 						<form action="<c:url value="/productcategory/showform"/>">
-							<button type="submit" class="btn btn-success btn-fw">Thêm Loại Sản Phẩm</button>
+							<button type="submit" class="btn btn-success btn-fw">Thêm
+								Loại Sản Phẩm</button>
 						</form>
 					</div>
 					<div class="col-9" align="right">
-						<form method="get" action="<c:url value="/productcategory/search"/>">
+						<form method="get"
+							action="<c:url value="/productcategory/search"/>">
 							<div class="form-group row">
 								<label class="col-sm-2 col-form-label"></label> <label
 									class="col-sm-2 col-form-label">Loại Sản Phẩm</label>
 								<div class="col-sm-3">
-									<select class="form-control" required="true" name="productcategoryfilter">
+									<select class="form-control" required="true"
+										name="productcategoryfilter">
 										<option value="0">Tất cả loại sản phẩm</option>
 										<c:catch var="category">
 											<c:if test="${category!=null}">

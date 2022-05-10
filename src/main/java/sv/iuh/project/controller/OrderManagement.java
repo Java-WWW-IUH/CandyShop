@@ -45,6 +45,7 @@ public class OrderManagement {
         String dateString  = df.format(date);
         mm.put("newlist", orderManagementService.getOrdersByDate(dateString));
         mm.put("unpaidlist", orderManagementService.getOrdersUnpaid());
+        mm.put("paidlist", orderManagementService.getOrdersPaid());
         return "admin/orderManagement";
     }
 
